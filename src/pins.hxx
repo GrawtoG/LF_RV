@@ -1,0 +1,38 @@
+//
+// Created by Matieusz on 04.05.2026.
+//
+
+#ifndef LINEFOLLOWER_PINS_HXX
+#define LINEFOLLOWER_PINS_HXX
+
+
+//ESC
+#define RIGHT_WHEEL_ESC_PIN 14
+#define LEFT_WHEEL_ESC_PIN 15
+
+//Voltage sensor
+#define VOLTAGE_SENSOR_PIN 6
+
+//MT6816 SPI0
+#define LEFT_ROT_ENCODER_CS_PIN 17
+#define RIGHT_ROT_ENCODER_CS_PIN 20
+
+#define ROT_ENCODERS_MISO_PIN 16
+#define ROT_ENCODERS_MOSI_PIN 19
+#define ROT_ENCODERS_SCK_PIN 18
+
+//MCP3008 SPI1
+#define LEFT_ADC_CS_PIN 13
+#define RIGHT_ADC_CS_PIN 9
+
+#define ADCs_MISO_PIN 12
+#define ADCs_MOSI_PIN 11
+#define ADCs_SCK_PIN 10
+
+
+//MPU6050 I2C0
+#define IMU_ADDR 0x68
+#define IMU_SDA 4
+#define IMU_SCL 5
+
+#endif //LINEFOLLOWER_PINS_HXX

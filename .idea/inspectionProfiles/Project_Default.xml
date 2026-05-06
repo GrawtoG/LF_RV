@@ -1,0 +1,67 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="ClangTidy" enabled="false" level="WARNING" enabled_by_default="false">
+      <scope name="Open Files" level="WARNING" enabled="false">
+        <option name="clangTidyChecks" value="-*,cert-dcl21-cpp,cert-dcl58-cpp,cert-err34-c,cert-err52-cpp,cert-err60-cpp,cert-flp30-c,cert-msc50-cpp,cert-msc51-cpp,cert-str34-c,hicpp-exception-baseclass,hicpp-multiway-paths-covered,mpi-buffer-deref,mpi-type-mismatch,openmp-use-default-none,performance-faster-string-find,performance-for-range-copy,performance-implicit-conversion-in-loop,performance-inefficient-algorithm,performance-inefficient-string-concatenation,performance-inefficient-vector-operation,performance-move-const-arg,performance-move-constructor-init,performance-no-automatic-move,performance-noexcept-move-constructor,performance-trivially-destructible,performance-type-promotion-in-math-fn,performance-unnecessary-copy-initialization,performance-unnecessary-value-param,abseil-*,bugprone-*,clang-analyzer-*,llvm-*" />
+      </scope>
+    </inspection_tool>
+    <inspection_tool class="Clazy" enabled="true" level="WARNING" enabled_by_default="true">
+      <scope name="Open Files" level="WARNING" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="CppEnforceCVQualifiersOrder" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Open Files" level="WARNING" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="CppEnforceCVQualifiersPlacement" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Open Files" level="WARNING" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="CppEnforceDoStatementBraces" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Open Files" level="WARNING" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="CppEnforceForStatementBraces" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Open Files" level="WARNING" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="CppEnforceFunctionDeclarationStyle" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Open Files" level="WARNING" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="CppEnforceIfStatementBraces" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Open Files" level="WARNING" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="CppEnforceNestedNamespacesStyle" enabled="true" level="HINT" enabled_by_default="true">
+      <scope name="Open Files" level="HINT" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="CppEnforceOverridingDestructorStyle" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <scope name="Open Files" level="WEAK WARNING" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="CppEnforceOverridingFunctionStyle" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <scope name="Open Files" level="WEAK WARNING" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="CppEnforceTypeAliasCodeStyle" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Open Files" level="WARNING" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="CppEnforceWhileStatementBraces" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Open Files" level="WARNING" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="CppMemberInitializersOrder" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <scope name="Open Files" level="WEAK WARNING" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="CppRemoveRedundantBraces" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="Open Files" level="WARNING" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="CppUseAuto" enabled="true" level="HINT" enabled_by_default="true">
+      <scope name="Open Files" level="HINT" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="CppUseAutoForNumeric" enabled="true" level="HINT" enabled_by_default="true">
+      <scope name="Open Files" level="HINT" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="CppWrongIncludesOrder" enabled="true" level="HINT" enabled_by_default="true">
+      <scope name="Open Files" level="HINT" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="CppWrongSlashesInIncludeDirective" enabled="true" level="HINT" enabled_by_default="true">
+      <scope name="Open Files" level="HINT" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="Misra" enabled="false" level="WARNING" enabled_by_default="false">
+      <scope name="Open Files" level="WARNING" enabled="false" />
+    </inspection_tool>
+  </profile>
+</component>

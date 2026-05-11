@@ -7,45 +7,57 @@
 #ifndef LINEFOLLOWER_MATMT6816_HXX
 #define LINEFOLLOWER_MATMT6816_HXX
 
+#include "SPI.h"
 
-#define TwoPI 3.1415926535897932384626433832795
+#define TwoPI 2*3.1415926535897932384626433832795
 
-enum class EncoderMode
+#define MT6816_READ_REG_03                  0x83
+#define MT6816_READ_REG_04                  0x84
+
+#define GET_TIME micros
+
+static SPISettings MT8616Settings(1000000, MSBFIRST, SPI_MODE3);
+
+
+enum class EncoderRes
 {
-	B16 = 16,
 	B14 = 14,
-	B12 = 2
 };
 
-template <int CS, int MISO, int MOSI, int SCK, int noOfBits>
-class MatT6816
+
+template <int CS, SPIClass *spi = &SPI, EncoderRes encoderRes = EncoderRes::B14>
+class MatMT6816
 {
 public:
 	//double readAngle();
 
-	double operator()() { return __getAngle(); };
+	MatMT6816();
+	double operator()() { return getAngleRaw(); };
 
-	double readAngleDeg();
+	double readAngleDeg() { toDeg(getAngleRaw()); };
 
-	double readAngleRad();
+	double readAngleRad() { toRad(getAngleRaw()); };
 
 	double getSpeed();
 
-	bool init();
+	// static int init();
 
 	double getSpeed();
 
 private:
-	static constexpr double pulseToDeg = static_cast<double>(2 << noOfBits) / 360;
-	static constexpr double pulseToRad = static_cast<double>(2 << noOfBits) / TwoPI;
+	static constexpr double pulseToDeg = 360 / static_cast<double>(1 << static_cast<int>(encoderRes));
+	static constexpr double pulseToRad = TwoPI / static_cast<double>(1 << static_cast<int>(encoderRes));
 
-	inline double toDeg(int pulses);
+	static inline double toDeg(const int pulses) { return pulses * pulseToDeg; };
 
-	inline double toRad(int pulses);
+	static inline double toRad(const int pulses) { return pulses * pulseToRad; };
 
-	double __getAngle();
+	static int getAngleRaw();
 
 	double speed = 0;
+	uint16_t prevPulses = 0;
+	uint32_t prevTime = 0;
+
 	bool canReadAngle = true;
 };
 

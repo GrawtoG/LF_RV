@@ -7,14 +7,15 @@
 
 #include <Arduino.h>
 
-template<int pin, int num, int denom>
-class MatVoltageSensor {
+template <int pin, int num, int denom, int maxMiliVolts = 330, int resolution = 1024>
+class MatVoltageSensor
+{
 public:
-	double
-	double getVoltage() { return analogRead(pin); };
+	static int getRaw() { return analogRead(pin); };
+	static double getVoltage() { return (analogRead(pin) * multiplier); }
 
 private:
-	const double ratio = num / static_cast<double>(denom);
+	static constexpr double multiplier = ((maxMiliVolts / 100.0) / resolution) * (num / static_cast<double>(denom));
 };
 
 
